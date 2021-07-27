@@ -37,13 +37,21 @@ function script_and_style_cdek_admin(){
   * Helper
   */ 
 
- function show($array) {
+ function dshow($array) {
    echo "<pre>";
    print_r($array);
    echo "</pre>";
 
  }
 
+ /**
+ * Модуль создания меню
+ */
+require "inc/menu.php";  
+
+/**
+ * class WC_Cdek_Market_Interaction
+ */
 require "inc/class-cdek.php";
 
 /**
