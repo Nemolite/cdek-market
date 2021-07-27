@@ -1,4 +1,4 @@
-#Plugin Name: boxberry-delivery (boxdev)
+#Plugin Name: cdek-market (cdek)
 * Plugin URI: https://github.com/Nemolite/cdek-market
 * Description: Взаимодействие с торговой площадкой СДЭК.Маркет
 * Version: 1.0.0
