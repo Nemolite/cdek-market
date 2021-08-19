@@ -55,15 +55,26 @@ require "inc/menu.php";
 require "inc/class-cdek.php";
 
 /**
+ * Модуль взаимодействия
+ */
+require "inc/interaction.php";
+
+/**
+ * Модуль работы с базами данных
+ */
+require "inc/database.php";
+
+/**
  * Для того чтобы класс был виден в системе
  *
  * @param array $methods
  * @return array $methods
  */
+/*
 function cdek_add_shipping_class( $methods ) {
-	$methods[ 'truemisha_shipping_method' ] = 'WC_Cdek_Market_Interaction'; 
+	$methods[ 'cdek_market' ] = 'WC_Cdek_Market_Interaction'; 
 	return $methods;
 }
 add_filter( 'woocommerce_shipping_methods', 'cdek_add_shipping_class' );
-
+*/
 ?>

@@ -1,1 +1,24 @@
+.cdek_table {
+  border-collapse: collapse;
+}
 
+.cdek_table_td {
+  border: solid 1px #000;
+  padding: 5px;
+}
+
+tbody tr.cdek_table_tr:nth-child(odd) {
+  background-color: #c9e4f6; /* фон нечетных строк */
+}
+
+tbody tr.cdek_table_tr:nth-child(even) {
+  background-color: #b4daf2; /* фон четных строк */
+}
+
+.cdek_token_input {
+  width: 400px;
+}
+
+.cdek_category_input {
+  width: 100px;
+}
