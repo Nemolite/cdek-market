@@ -52,55 +52,10 @@ function cdek_refresh_token(){
     }
     else
     {
-        dshow($data);
-        
+        dshow($data);       
 
     }  
 }
-
-function cdek_get_products(){
-    $apiurl  = 'https://api.cdek.market/api/v1/products';
-    // $api_key = '21031_404b87q580X04pSrQvpNb1b4MQ530389';
-    $ch = curl_init();
-    // curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
-    curl_setopt($ch, CURLOPT_URL, $apiurl);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, array(
-       // 'api_key'=>$api_key, 
-          'page'   => 2,
-          'pageSize' => 4
-    ));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $data = json_decode(curl_exec($ch),1);
-    if( count($data)<=0 )
-    {
-        echo "Отправление не создано";
-    }
-    else
-    {
-        dshow($data);
-
-    } 
-
-}
-
-function cdek_one_get_product_test_22(  $token, $post ) {    
-    $ch = curl_init();
-    $apiurl  = 'https://api.cdek.market/api/v1/products';
-    curl_setopt($ch, CURLOPT_URL, $apiurl);
- 
-    $post = json_encode($post);
-    $authorization = "Authorization: Bearer ".$token; 
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
-
-    $result = curl_exec($ch); 
-    curl_close($ch); 
-    return json_decode($result); 
-
-    die();
-
-
- }
 
  /**
  * Импорт товаров
@@ -140,29 +95,6 @@ function cdek_import_product( $list, $token ){
 
     } 
 
-}
-
-function cdek_get_product_from_cdek(){
-    $curl = curl_init();
-
-curl_setopt_array($curl, array(
-CURLOPT_URL => "your api goes here",
-CURLOPT_RETURNTRANSFER => true,
-CURLOPT_ENCODING => "",
-CURLOPT_MAXREDIRS => 10,
-CURLOPT_TIMEOUT => 0,
-CURLOPT_FOLLOWLOCATION => true,
-CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-CURLOPT_CUSTOMREQUEST => "GET",
-CURLOPT_HTTPHEADER => array(
-"Authorization: Bearer eyJ0eciOiJSUzI1NiJ9.eyJMiIsInNjb3BlcyI6W119.K3lW1STQhMdxfAxn00E4WWFA3uN3iIA"
-  ),
- ));
-
-$response = curl_exec($curl);
-$data = json_decode($response, true);
-
-echo $data;
 }
 
 /**
