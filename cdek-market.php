@@ -36,12 +36,10 @@ function script_and_style_cdek_admin(){
  /**
   * Helper
   */ 
-
  function dshow($array) {
    echo "<pre>";
    print_r($array);
    echo "</pre>";
-
  }
 
  /**
@@ -63,18 +61,4 @@ require "inc/interaction.php";
  * Модуль работы с базами данных
  */
 require "inc/database.php";
-
-/**
- * Для того чтобы класс был виден в системе
- *
- * @param array $methods
- * @return array $methods
- */
-/*
-function cdek_add_shipping_class( $methods ) {
-	$methods[ 'cdek_market' ] = 'WC_Cdek_Market_Interaction'; 
-	return $methods;
-}
-add_filter( 'woocommerce_shipping_methods', 'cdek_add_shipping_class' );
-*/
 ?>

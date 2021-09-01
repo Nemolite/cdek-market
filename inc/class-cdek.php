@@ -59,7 +59,7 @@ if ( ! class_exists( 'WC_Cdek_Market_Interaction' ) ) {
             $list['categories'] = [
                 $cat_num
                 ]; // 50 - спорттовары СДЭК Маркет
-         //   $img_id = get_post_meta($product_id ,'_thumbnail_id',true);
+           // $img_id = get_post_meta($product_id ,'_thumbnail_id',true);
            // $img_id = $product->get_image_id();
 
            $attachment_ids = $_product->get_gallery_image_ids();

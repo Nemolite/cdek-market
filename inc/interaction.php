@@ -182,9 +182,6 @@ function cdek_get_category(){
                 <td class="cdek_table_td">
                     Выбрать
                 </td>
-                <!--
-                <td class="cdek_table_td">Статус</td>            
-                -->
             </tr>
         </thead>
         <tbody>
@@ -217,13 +214,7 @@ function cdek_get_category(){
                             id="<?php echo the_ID()?>"
                             data-product_id="<?php echo the_ID()?>"
                         >
-                </td>
-                <!--
-                <td class="cdek_table_td">
-
-                </td>
-                -->
-            
+                </td>            
             </tr>          
             <?php           
                 }
